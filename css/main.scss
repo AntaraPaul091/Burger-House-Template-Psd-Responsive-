@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url("../fonts/BebasNeue/BebasNeue-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url("../fonts/BebasNeue/BebasNeue-Bold.ttf");
+    font-weight: bold;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.container {
+    @media only screen and (max-width: 860px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+// VARIABLES
+$color-primary: #3d2514;
+$color-secondary: #ffc045;
+$color-tertiary: #bf2222;
+
+
+header {
+    min-height: 100vh;
+    background: url("../images/bg_hero.png");
+
+    .topNav .main-nav{
+        z-index: 1;
+        p {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.86rem;
+            color: $color-primary;
+        }
+        a {
+            color: $color-primary;
+            font-family: 'BebasNeue', sans-serif;
+            font-weight: bold;
+            font-size: 1.1rem;
+            letter-spacing: 0.26rem;
+        }
+    }
+    .bottomContent {
+        .hero__left {
+            z-index: 1;
+            padding: 8% 0;
+            color: $color-primary;
+
+            p {
+                font-family: 'BebasNeue', sans-serif;
+                border: 2px dashed $color-primary;
+                font-size: 1.2rem;
+            }
+
+            h1, h2 {
+                font-family: 'Alfa Slab One', cursive;
+                text-shadow: 4px 4px 5px rgba(255, 255, 255, 0.8);
+            }
+
+            h1 {
+                font-size: 6.2rem;
+                @media only screen and (max-width: 576px) {
+                    font-size: 4.2rem;
+                }
+            }
+
+            h2 {
+                font-size: 3.4rem;
+                transform: translateY(-20%);
+                @media only screen and (max-width: 576px) {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+        .hero__right {
+            margin-top: -120px;
+            margin-left: -90px;
+
+            @media only screen and (max-width: 991px) {
+                margin-left: 0;
+            }
+
+            img {
+                width: 116%;
+
+                @media only screen and (max-width: 991px) {
+                    width: 90%;
+                }
+            }
+            .burger_price {
+                bottom: 8%;
+                left: 10%;
+                background-color: lighten(red, 8%);
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                @media only screen and (max-width: 700px) {
+                    transform: scale(0.9);
+                    bottom: 5%;
+                }
+                @media only screen and (max-width: 560px) {
+                    transform: scale(0.7);
+                    bottom: 3%;
+                }
+
+                .box {
+                    border: 2px dashed white;
+                    border-radius: 50%;
+                    padding: 4%;
+                    p {
+                        color: white;
+                        font-family: 'BebasNeue', sans-serif;
+                        font-weight: bold;
+                        text-align: center;
+                        &.price {
+                            font-size: 3.2rem;
+                            span {
+                                font-size: 1.3rem;
+                                letter-spacing: 1.2px;
+                            }
+                        }
+                        &.text {
+                            font-size: 1.06rem;
+                            letter-spacing: 0.8rem;
+                            margin-top: -25px;
+                            transform: translateX(6px);
+                        }
+                    }
+                }                 
+            }
+        }
+    }
+}
+
+section#features {
+    img {
+        width: 100%;
+    }
+    .text {
+        top: 20%;
+        left: 8%;
+        color: white;
+        font-family: 'BebasNeue', sans-serif;
+
+        h4 {
+            font-size: 1.1rem;
+        }
+        h3 {
+            font-size: 2.2rem;
+            transform: translateY(-5%);
+            &:nth-child(3) {
+                transform: translateY(-25%);
+            }
+        }
+    }
+    .features_left .text {
+        top: 11%;
+        left: 10%;
+    }
+}
+
+section#showcase {
+    p {
+        font-family: 'Montserrat', sans-serif;
+        color: $color-primary;
+        font-size: 0.8rem;
+    }
+    .card-title {
+        font-family: 'BebasNeue', sans-serif;
+        font-size: 1.8rem;
+        color: $color-primary;
+    }
+}
+
+section#events {
+    .box {
+        box-shadow: 5px 5px 20px 10px rgba($color-primary, .1);
+        .slide-text:focus, .slide-image:focus {
+            outline: none;
+        }
+        .slider_left {
+            .mainHeading h2 {
+                font-size: 2.3rem;
+            }
+            .subHeading h3 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 0.8rem;
+                line-height: 2;
+            }
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+section#reservation {
+    background: url('../images/bg_reservation.png');
+    background-size: cover;
+
+    form {
+        padding-bottom: 80px;
+
+        input {
+            font-family: 'BebasNeue', sans-serif;
+            font-size: 1.1rem;
+            width: 360px;
+            height: 50px;
+            border: 1px solid rgba($color: #000000, $alpha: 0.3);
+            border-radius: 4px;
+
+            &:focus {
+                outline: none;
+            }
+
+            &.btnt3 {
+                font-family: 'Alfa Slab One', cursive;
+                font-size: 1.1rem;
+                border: none;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+footer .container {
+    background: url('../images/bg_footer.png');
+    background-size: cover;
+    color: white;
+
+    .logo_white img {
+        width: 300px;
+    }
+
+    .text_details p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.8rem;
+        line-height: 1.7;
+    }
+
+    .contact_details {
+        padding-bottom: 140px;
+
+        i {
+            font-size: 2rem;
+            transform: translateY(25%);
+            width: 70px;
+        }
+        p {
+            font-family: 'BebasNeue', sans-serif;
+            font-size: 0.94rem;
+            width: 200px;
+        }
+    }
+
+    .footer_credits {
+        .credit p {
+            font-family: 'BebasNeue', sans-serif;
+            font-size: 0.86rem;
+        }
+        .icons i {
+            background: white;
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            
+            @media only screen and (min-width: 768px) {
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+
+
+// BUTTONS
+.btnt1 {
+    background: $color-secondary;
+    color: $color-primary;
+    font-family: 'BebasNeue', sans-serif;
+    font-size: 1.1rem;
+
+    &:hover {
+        color: $color-primary;
+    }
+}
+.btnt2, .btnt3 {
+    background: $color-tertiary;
+    color: white;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 0.7rem;
+
+    &:hover {
+        color: white;
+    }
+}
+
+
+// HEADINGS
+.mainHeading h2 {
+    font-family: 'Alfa Slab One', cursive;
+    color: $color-primary;
+    font-size: 2.8rem;
+}
+
+.subHeading h3 {
+    font-family: 'BebasNeue', sans-serif;
+    color: $color-primary;
+    font-size: 1.8rem;
+}
+
+// URILITIES
+.u-big-11 {
+    transform: scale(1.1) translateY(-5%);
+}
+
+// SLIDER
+.slick-dots {
+    display: flex;
+    margin: 0;
+    margin-top: 40px;
+    list-style-type: none;
+
+    @media only screen and (max-width: 768px) {
+        justify-content: center;
+    }
+
+    li {
+        margin: 0 0.25rem;
+    }
+
+    button {
+        display: block;
+        width: 0.8rem;
+        height: 0.8rem;
+        padding: 0;
+        
+        border: none;
+        border-radius: 50%;
+        background-color: lightgray;
+        
+        text-indent: -9999px;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    li.slick-active button {
+        background-color: $color-secondary;
+    }
+}
